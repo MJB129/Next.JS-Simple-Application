@@ -1,0 +1,84 @@
+/*! @name @misterben/videojs-skip-intro @version 0.1.1 @license MIT */
+/*! @name @misterben/videojs-float-button @version 0.1.5 @license MIT */
+.video-js .vjs-float-button {
+  position: absolute;
+  font-size: 14px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #0c9, #09f);
+  border-radius: 20px;
+  cursor: pointer;
+  opacity: 1;
+  transition: opacity 1s;
+  font-weight: 900;
+}
+.video-js .vjs-float-button.vjs-fb-left {
+  left: 5%;
+}
+.video-js .vjs-float-button.vjs-fb-left.vjs-fb-flush {
+  left: 0;
+}
+.video-js .vjs-float-button.vjs-fb-right {
+  right: 5%;
+}
+.video-js .vjs-float-button.vjs-fb-right.vjs-fb-flush {
+  right: 0;
+}
+.video-js .vjs-float-button.vjs-fb-bottom {
+  bottom: 100px;
+}
+.video-js .vjs-float-button.vjs-fb-top {
+  top: 5%;
+}
+.video-js .vjs-float-button span,
+.video-js.vjs-skip-intro .vjs-float-float-button span {
+  padding: 0 2.5em;
+}
+.video-js.vjs-dock .vjs-float-button.vjs-fb-top {
+  top: 80px;
+}
+
+.video-js.not-hover .vjs-float-button:not(.force-display),
+.video-js.vjs-skip-intro.not-hover .vjs-float-float-button:not(.force-display),
+.video-js.vjs-skip-intro.vjs-user-inactive
+  .vjs-float-float-button:not(.force-display),
+.video-js.vjs-user-inactive .vjs-float-button:not(.force-display) {
+  opacity: 1;
+}
+/* .video-js.vjs-skip-intro .vjs-skip-intro-button span:before {
+  content: "\f11f";
+  font-family: VideoJS;
+  font-size: 120%;
+  vertical-align: text-bottom;
+} */
+.video-js.vjs-skip-intro .vjs-skip-intro-button:hover span:before {
+  color: var(--vjs-accent-colour);
+}
+
+/* 481px — 768px: iPads, Tablets */
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+  .video-js .vjs-float-button {
+      position: absolute;
+      font-size: 10px;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(90deg, #0c9, #09f);
+      border-radius: 20px;
+      cursor: pointer;
+      opacity: 1;
+      transition: opacity 1s;
+      font-weight: 900;
+  }
+  .video-js .vjs-float-button.vjs-fb-right {
+      right: 4%;
+      bottom: 30% !important;
+  }
+  .video-js .vjs-float-button span,
+  .video-js.vjs-skip-intro .vjs-float-float-button span {
+      padding: 0 0.5em;
+  }
+}

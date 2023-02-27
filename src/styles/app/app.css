@@ -1,0 +1,30 @@
+.sidebar-item {
+  width: 100%;
+  padding: 15px 20px;
+}
+
+.sidebar-item a {
+  color: #949494;
+  display: flex;
+  align-items: center;
+
+}
+
+.sidebar-item a svg path {
+  stroke: #949494;
+}
+
+.sidebar-item.active,
+.sidebar-item:hover {
+  background-color: #f2f4fb;
+}
+
+.sidebar-item.active a,
+.sidebar-item:hover a {
+  color: #0027BC;
+}
+
+.sidebar-item.active a svg path,
+.sidebar-item:hover a svg path {
+  stroke: #0027BC;
+}
